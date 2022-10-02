@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_odoo_client_action" model="ir.actions.client">
+            <field name="name">Odoo Client Actions</field>
+            <field name="tag">odoo_client_action</field>
+            <field name="target">main</field>
+        </record>
+    
+        <menuitem name="Odoo Client Actions" id="action_odoo_client_action_root_menu" sequence="50" />
+        <menuitem
+            id="menu_odoo_client"
+            name="Odoo Client Actions"
+            action="action_odoo_client_action"
+            parent="action_odoo_client_action_root_menu"
+            sequence="10"/>
+    </data>
+</odoo>
