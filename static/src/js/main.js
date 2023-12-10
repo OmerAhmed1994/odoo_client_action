@@ -7,15 +7,12 @@ import { useService } from "@web/core/utils/hooks";
 const { Component, onWillStart, useState, useEffect } = owl;
 
 export class OdooClientAction extends Component {
-    constructor() {
-        super(...arguments);
+    setup() {
         this.state = useState({
             users: [],
         });
-        console.log("\n\n ===========constructor==============")
-    }
-    setup() {
         console.log("\n\n ===========setup==============")
+        onWillStart(this.willStart)
     }
     async willStart() {
         await this.loadUsers()
@@ -48,6 +45,6 @@ export class OdooClientAction extends Component {
     }
 
 }
-OdooClientAction.template = "odoo_client_action.DashboardAction";
 
+OdooClientAction.template = "odoo_client_action.DashboardAction";
 registry.category("actions").add("odoo_client_action", OdooClientAction);
