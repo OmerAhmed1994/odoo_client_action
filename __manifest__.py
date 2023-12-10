@@ -21,8 +21,6 @@
         'web.assets_backend': [
             'odoo_client_action/static/src/js/main.js',
             'odoo_client_action/static/src/css/style.css',
-        ],
-        'web.assets_qweb': [
             'odoo_client_action/static/src/xml/template.xml',
         ],
     },
